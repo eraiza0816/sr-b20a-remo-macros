@@ -13,7 +13,7 @@ import os
 SVC = "945ca2b0-852c-4ab8-b654-354df41c2795"
 CHR = "0c50e7fa-594c-408b-a8d455b53b884b7c08"
 OUT = os.path.dirname(os.path.abspath(__file__))
-RAW = "https://raw.githubusercontent.com/eraiza0816/sr-b20a-remo-macros/main"
+RAW = "https://github.com/eraiza0816/sr-b20a-remo-macros/blob/main"
 
 CMDS = {  # name: (raw payload bytes, description)
     "power_on": ([0x40, 0x78, 0x7E], "Power ON"),
@@ -76,7 +76,7 @@ for name, (payload, desc) in CMDS.items():
     val = "".join("%02X" % b for b in framed)
     with open(os.path.join(OUT, name + ".xml"), "w") as f:
         f.write(TPL.format(name=name, desc=desc, svc=SVC, chr=CHR, val=val))
-    rows.append(f"| {name} | {desc} | `{val}` | {RAW}/{name}.xml |")
+    rows.append(f"| {name} | {desc} | `{val}` | {RAW}/{name}.xml?raw=1 |")
 
 with open(os.path.join(OUT, "COMMANDS.md"), "w") as f:
     f.write("# SR-B20A BLE macros\n\n")
