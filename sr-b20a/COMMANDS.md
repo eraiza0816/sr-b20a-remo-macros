@@ -1,4 +1,4 @@
-# SR-B20A BLE macros
+# YAMAHA SR-B20A BLE macros
 
 service `945ca2b0-852c-4ab8-b654-354df41c2795`, write char `0c50e7fa-594c-408b-a8d455b53b884b7c08`, `WRITE_COMMAND`.
 
