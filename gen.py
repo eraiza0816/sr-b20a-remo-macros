@@ -12,8 +12,8 @@ import os
 
 SVC = "945ca2b0-852c-4ab8-b654-354df41c2795"
 CHR = "0c50e7fa-594c-408b-a8d455b53b884b7c08"
-OUT = os.path.dirname(os.path.abspath(__file__))
-RAW = "https://github.com/eraiza0816/sr-b20a-remo-macros/blob/main"
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sr-b20a")
+RAW = "https://github.com/eraiza0816/sr-b20a-remo-macros/blob/main/sr-b20a"
 
 CMDS = {  # name: (raw payload bytes, description)
     "power_on": ([0x40, 0x78, 0x7E], "Power ON"),
