@@ -76,7 +76,7 @@ for name, (payload, desc) in CMDS.items():
     val = "".join("%02X" % b for b in framed)
     with open(os.path.join(OUT, name + ".xml"), "w") as f:
         f.write(TPL.format(name=name, desc=desc, svc=SVC, chr=CHR, val=val))
-    rows.append(f"| {name} | {desc} | `{val}` | {RAW}/{name}.xml?raw=1 |")
+    rows.append(f"| {name} | {desc} | `{val}` | {RAW}/{name}.xml |")
 
 with open(os.path.join(OUT, "COMMANDS.md"), "w") as f:
     f.write("# SR-B20A BLE macros\n\n")
