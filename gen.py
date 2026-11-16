@@ -56,7 +56,7 @@ for lv in range(0, 51, 5):
 TPL = """<macro name="{name}" icon="PLAY">
    <assert-service description="Ensure Yamaha soundbar service" uuid="{svc}">
       <assert-characteristic description="Ensure write characteristic" uuid="{chr}">
-         <property name="WRITE" requirement="MANDATORY"/>
+         <property name="WRITE_WITHOUT_RESPONSE" requirement="MANDATORY"/>
       </assert-characteristic>
    </assert-service>
    <write description="{desc}" characteristic-uuid="{chr}" service-uuid="{svc}" value="{val}" type="WRITE_COMMAND"/>

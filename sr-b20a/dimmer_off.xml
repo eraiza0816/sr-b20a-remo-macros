@@ -1,7 +1,7 @@
 <macro name="dimmer_off" icon="PLAY">
    <assert-service description="Ensure Yamaha soundbar service" uuid="945ca2b0-852c-4ab8-b654-354df41c2795">
       <assert-characteristic description="Ensure write characteristic" uuid="0c50e7fa-594c-408b-a8d455b53b884b7c08">
-         <property name="WRITE" requirement="MANDATORY"/>
+         <property name="WRITE_WITHOUT_RESPONSE" requirement="MANDATORY"/>
       </assert-characteristic>
    </assert-service>
    <write description="Dimmer Off" characteristic-uuid="0c50e7fa-594c-408b-a8d455b53b884b7c08" service-uuid="945ca2b0-852c-4ab8-b654-354df41c2795" value="CCAA025102AB" type="WRITE_COMMAND"/>
